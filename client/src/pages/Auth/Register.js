@@ -25,7 +25,7 @@ const Register = () => {
           Authorization: `${token.token}`,
         },
       });
-      console.log(response);
+      // console.log(response);
       if (response?.data?.ok) {
         navigate("/");
       }
@@ -70,8 +70,8 @@ const Register = () => {
       }
     } catch (error) {
       setloading(false)
-      console.log("error aa gaya hai frontend mai register page");
-      console.log(error);
+      // console.log("error aa gaya hai frontend mai register page");
+      // console.log(error);
     }
   };
 

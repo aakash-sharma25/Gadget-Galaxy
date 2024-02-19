@@ -32,7 +32,7 @@ exports.createCategoryController = async(req,res) => {
 
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({
           success: false,
           message: "error in creating category",
@@ -58,7 +58,7 @@ exports.updateCategoryController = async(req,res) => {
         });
     
   } catch (error) {
-    console.log(error);
+    // console.log(error);
         res.status(500).json({
           success: false,
           message: "error in updating category",
@@ -81,7 +81,7 @@ exports.allcategoryController =async(req,res) => {
     });
     
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "error in getiing all category",
@@ -105,7 +105,7 @@ exports.singlecategoryController =async(req,res) => {
     });
     
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "error in getiing the given category",
@@ -129,7 +129,7 @@ exports.deletecategoryController =async(req,res) => {
     });
     
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "error in getiing the given category",

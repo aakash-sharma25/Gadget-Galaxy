@@ -11,7 +11,7 @@ export default function useCategory() {
       // console.log(data,"from use category hooks")
       setCategories(data?.allCategories);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

@@ -11,7 +11,7 @@ const Private = () => {
     useEffect(() => {
         const authCheck = async () => {
             const res = await axios.get("/api/v1/auth/user-auth");
-            console.log(res);
+            // console.log(res);
             if(res.data.ok) {
                 setok(true)
             }else{

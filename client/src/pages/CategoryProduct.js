@@ -42,7 +42,7 @@ const CategoryProduct = () => {
       setCategory(data?.category);
       setloading(false);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   //detele item
@@ -54,7 +54,7 @@ const CategoryProduct = () => {
       setCart(myCart);
       localStorage.setItem("cart", JSON.stringify(myCart));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   return (

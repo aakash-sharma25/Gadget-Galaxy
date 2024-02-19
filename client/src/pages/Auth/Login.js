@@ -43,7 +43,7 @@ const Login = () => {
         },
       });
       setloading(false);
-      console.log(response);
+      // console.log(response);
       if (response?.data?.ok) {
         navigate("/");
       }
@@ -81,8 +81,8 @@ const Login = () => {
     } catch (error) {
       setloading(false);
       toast.error(error.response.data.message);
-      console.log("error aa gaya hai frontend mai register page");
-      console.log(error);
+      // console.log("error aa gaya hai frontend mai register page");
+      // console.log(error);
     }
   };
 

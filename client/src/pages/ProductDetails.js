@@ -40,12 +40,12 @@ const ProductDetails = () => {
       const { data } = await axios.get(
         `/api/v1/product/get-product/${params.slug}`
       );
-      console.log(data, "data from get product by params slug");
+      // console.log(data, "data from get product by params slug");
       setProduct(data?.product);
 
       getSimilarProduct(data?.product._id, data?.product.category._id);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   //get similar product
@@ -58,7 +58,7 @@ const ProductDetails = () => {
 
       setRelatedProducts(data?.products);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   //detele item
@@ -70,7 +70,7 @@ const ProductDetails = () => {
       setCart(myCart);
       localStorage.setItem("cart", JSON.stringify(myCart));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   const matches = useMediaQuery("(min-width:600px)");

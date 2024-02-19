@@ -39,7 +39,7 @@ const CreateProduct = () => {
         // console.log(data);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Something went wrong in getting catgeory");
     }
   };
@@ -73,9 +73,9 @@ const CreateProduct = () => {
         navigate("/dashboard/admin");
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error(error.response.data.message);
-      console.log(error.response.data.message);
+      // console.log(error.response.data.message);
     }finally{
       setloading(false)
     }

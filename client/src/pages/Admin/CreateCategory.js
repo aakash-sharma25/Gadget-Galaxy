@@ -44,7 +44,7 @@ const CreateCategory = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("somthing went wrong in input form");
     }
   };
@@ -58,7 +58,7 @@ const CreateCategory = () => {
         // console.log(data);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Something went wrong in getting catgeory");
     }
   };

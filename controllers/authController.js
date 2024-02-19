@@ -39,7 +39,7 @@ exports.registerController = async (req, res) => {
       user,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "error in registrstion",
@@ -95,7 +95,7 @@ exports.loginController = async (req, res) => {
     token:token,
     })                                
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "error in login",
@@ -140,7 +140,7 @@ exports.forgotPasswordController = async( req,res) => {
         });
         
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({
           success: false,
           message: "error in password change",
@@ -184,7 +184,7 @@ exports.updateProfileController = async (req, res) => {
       updatedUser,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).send({
       success: false,
       message: "Error WHile Update profile",
@@ -204,7 +204,7 @@ exports.getOrdersController = async (req, res) => {
     res.json(orders);
 
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Error WHile Geting Orders",
@@ -223,7 +223,7 @@ exports.getAllOrdersController = async (req, res) => {
       .sort({ createdAt: "-1" });
     res.json(orders);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Error While Geting Orders",
@@ -237,7 +237,7 @@ exports.orderStatusController = async (req, res) => {
   try {
     const { orderId } = req.params;
     const { status } = req.body;
-    console.log("this is status comming from the client",status,"this is status comming from the client")
+    // console.log("this is status comming from the client",status,"this is status comming from the client")
     const orders = await Order.findByIdAndUpdate(
       orderId,
       { status:status },
@@ -245,7 +245,7 @@ exports.orderStatusController = async (req, res) => {
     );
     res.json(orders);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send({
       success: false,
       message: "Error While Updateing Order",

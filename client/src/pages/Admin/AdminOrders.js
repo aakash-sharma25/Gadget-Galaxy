@@ -35,7 +35,7 @@ const AdminOrders = () => {
       const { data } = await axios.get("/api/v1/auth/all-orders");
       setOrders(data);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -53,7 +53,7 @@ const AdminOrders = () => {
       getOrders();
     } catch (error) {
       toast.error("unable to change status")
-      console.log(error);
+      // console.log(error);
     }
   };
   const matches = useMediaQuery('(min-width:800px)');

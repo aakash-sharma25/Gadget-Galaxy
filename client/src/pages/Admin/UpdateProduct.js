@@ -35,7 +35,7 @@ const UpdateProduct = () => {
       const { data } = await axios.get(
         `/api/v1/product/get-product/${params.slug}`
       );
-      console.log(data, "from set single product");
+      // console.log(data, "from set single product");
       setName(data.product.name);
       setId(data.product._id);
       setDescription(data.product.description);
@@ -45,7 +45,7 @@ const UpdateProduct = () => {
       setShipping(data.product.shipping);
       setCategory(data.product.category._id);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   useEffect(() => {
@@ -56,12 +56,12 @@ const UpdateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get("/api/v1/category/all-category");
-      console.log(data, "all category");
+      // console.log(data, "all category");
       if (data?.success) {
         setCategories(data?.allCategories);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Something wwent wrong in getting catgeory");
     }
   };
@@ -92,7 +92,7 @@ const UpdateProduct = () => {
         navigate("/dashboard/admin/products");
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("something went wrong");
     }
   };
@@ -109,7 +109,7 @@ const UpdateProduct = () => {
       toast.success("Product Deleted Succfully");
       navigate("/dashboard/admin/products");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Something went wrong");
     }
   };

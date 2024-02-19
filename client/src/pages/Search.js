@@ -29,7 +29,7 @@ const Search = () => {
     setCart(myCart);
     localStorage.setItem("cart", JSON.stringify(myCart));
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
   return (

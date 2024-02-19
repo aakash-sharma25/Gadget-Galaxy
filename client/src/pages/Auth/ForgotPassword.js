@@ -50,7 +50,7 @@ const ForgotPassword = () => {
     
         } catch (error) {
           toast.error(error.response.data.message);
-          console.log("error in frontend , register page");
+          // console.log("error in frontend , register page");
           // console.log(error)
         }
       }
