@@ -26,7 +26,7 @@ app.use("/api/v1/category" , categoryRoutes)
 app.use("/api/v1/product" , productRoute)
 
 
-app.use(expre.static(path.join(__dirname,'./client/build')));
+app.use(express.static(path.join(__dirname,'./client/build')));
 
 app.get('*',(req,res)=>{
     res.sendFile((path.join(__dirname,'./client/build/index.html')))
