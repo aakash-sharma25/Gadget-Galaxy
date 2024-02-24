@@ -7,9 +7,6 @@ exports.jobScheduler = async () => {
 };
 
 const job = async () => {
-  //    console.log("after fetch requrest")
   let count = 1;
-//   console.log(count)
   count++;
-//   console.log(count)
 };
