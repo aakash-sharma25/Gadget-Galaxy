@@ -5,7 +5,7 @@ exports.connectDB = async (req, res) => {
     await mongoose.connect(process.env.MONGO_URL)
     .then(console.log("connection to db is successfull"));
   } catch (error) {
-    // console.log("error in making db connection");
-    // console.log(error)
+    console.log("error in making db connection");
+    console.log(error)
   }
 };
