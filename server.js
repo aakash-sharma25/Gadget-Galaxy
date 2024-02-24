@@ -6,6 +6,7 @@ const categoryRoutes = require("./routes/categoryRoutes");
 const productRoute = require("./routes/productRoute");
 require("dotenv").config();
 const path = require("path");
+const { jobScheduler } = require("./helper/scheduler");
 
 
 
@@ -17,7 +18,7 @@ app.use(express.json())
 //database connection
 
 connectDB();
-
+jobScheduler();
 //routes
 
 app.use("/api/v1/auth" , authRoute)
@@ -35,5 +36,5 @@ app.get("*", function (req,res) {
 const PORT = process.env.PORT ;
 
 app.listen(PORT, ()=>{
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running`);
 })
